@@ -4,54 +4,47 @@ import Head from "next/head";
 import SearchPageComponent from "../components/searchPage/search";
 import { Fragment } from "react";
 import { useRouter } from "next/router";
-import MainNavigation from "../components/layout/main-navigation";
+import response from "../lib/response";
 
-const HomePage = (props) => {
+const SearchPage = (props) => {
 	const router = useRouter();
-	const { location, startDate, endDate, numberOfGuest } = router.query;
-	let placeholder = ``;
-
-	const rangeDate = `- ${startDate?.substr(0, 10)} - ${endDate?.substr(
-		0,
-		10,
-	)}`;
-
-	if (startDate && location && numberOfGuest && endDate) {
-		placeholder = `${location} | ${rangeDate} | ${numberOfGuest} Guest`;
-	}
 
 	return (
 		<Fragment>
 			<Head>
-				<title>Search</title>
+				<title>{router.query.term} - Google Search</title>
 				<meta
 					name='description'
 					content='Airbnb Clone build with React + Next Js.'
 				/>
 			</Head>
-			<MainNavigation placeholder={placeholder} />
+
 			<SearchPageComponent
-				data={props?.data}
-				cardData={props?.cardData}
-				location={location}
-				numberOfGuest={numberOfGuest}
-				startDate={startDate}
-				endDate={endDate}
 				searchResult={props?.data}
+				term={router.query.term}
 			/>
 		</Fragment>
 	);
 };
 
-export async function getStaticProps(context) {
-	const searchResultResponse = await fetch("https://links.papareact.com/isz");
-	const data = await searchResultResponse.json();
+export async function getServerSideProps(context) {
+	// Google Api key
+	// https://developers.google.com/custom-search/v1/using_rest
+
+	// Context key
+	// https://cse.google.com/create/new
+
+	// const searchResultResponse = await fetch(
+	// 	`https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${context.query.term}`,
+	// );
+
+	// const data = await searchResultResponse.json();
 
 	return {
 		props: {
-			data: data,
+			data: response,
 		},
 	};
 }
 
-export default HomePage;
+export default SearchPage;
