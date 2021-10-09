@@ -3,7 +3,8 @@
 import Head from "next/head";
 import HomePageComponent from "../components/homePage/homePage";
 import { Fragment } from "react";
-import MainNavigation from "../components/layout/main-navigation";
+import Header from "../components/homePage/header";
+import Footer from "../components/layout/footer";
 
 const HomePage = (props) => {
 	return (
@@ -15,9 +16,9 @@ const HomePage = (props) => {
 					content='Google Clone build with React + Next Js.'
 				/>
 			</Head>
-			<MainNavigation />
-
+			<Header />
 			<HomePageComponent />
+			<Footer />
 		</Fragment>
 	);
 };
