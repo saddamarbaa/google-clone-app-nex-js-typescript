@@ -119,11 +119,15 @@ yarn dev
 -  STORAGE_BUCKET
 -  MESSAIN_SENDER_ID
 -  APPID
+ 
+get google API key from the following link
+https://www.instagram.com/saddam.dev/
 
--  get google API key from the following link  <a href="https://developers.google.com/custom-search/v1/using_rest">
--  get google Context key from the following link  <a href="https://cse.google.com/create/new">
+get google Context key from the following link
+https://cse.google.com/create/new
+
+
 -  and add the following environment variables to your next.config.js as well
-
 -  CONTEXT_KEY
 -  GOOGLE_API_KEY
 
@@ -134,6 +138,7 @@ Project is now complete in (React js + Next js) so my next step I would love to 
 # Inspiration
 
 Build By Saddam Arbaa Project inspired by [Google] https://www.google.com/
+
 
 # Screenshots
 
