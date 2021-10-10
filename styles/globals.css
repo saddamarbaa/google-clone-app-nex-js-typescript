@@ -6,6 +6,15 @@
 
 @layer components {
 	.customButton {
-		@apply px-4 py-2 border  rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-100 transition duration-150;
+		@apply bg-[#f8f9fa]  p-3 px-4 outline-none transition duration-100 cursor-pointer rounded-md ring-gray-200 text-gray-800 hover:ring-1 active:ring-gray-300
+		hover:shadow-md;
+	}
+
+	.customFlex {
+		@apply flex items-center space-x-5 cursor-pointer;
+	}
+
+	.customLink {
+		@apply hover:underline cursor-pointer transition duration-150;
 	}
 }

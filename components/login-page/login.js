@@ -33,8 +33,8 @@ const LogIn = () => {
 					}}>
 					<Image
 						className='logo-img'
-						src='/images/Airbnb_Logo_Bélo.svg.png'
-						alt='Picture of the youtube'
+						src='/images/Google_2015_logo.svg.webp'
+						alt='Picture of the Google'
 						layout='fill'
 						objectFit='contain'
 					/>
@@ -44,7 +44,7 @@ const LogIn = () => {
 				</div>
 
 				<button
-					className='mt-[50px] text-white text-xl px-4 py-4 rounded-md bg-red-500 hover:bg-red-700 transition duration-300 '
+					className='mt-[50px] text-white text-xl px-4 py-4 rounded-md bg-[#0a8f48] hover:bg-[#075e54] transition duration-300 '
 					onClick={signInWithGoogleHandler}>
 					Sign In With Google
 				</button>

@@ -13,7 +13,7 @@ import Layout from "../components/layout/layout";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import db, { auth } from "../config/firebase";
-
+import Loading from "../components/UI/loading";
 import LogInScreen from "./login";
 
 const progress = new ProgressBar({
@@ -23,7 +23,7 @@ const progress = new ProgressBar({
 
 	// Color of the progress bar.
 	// Also used for the glow around the bar.
-	color: "#fd5b61",
+	color: "#4485F4",
 
 	// Class name used for the progress bar element.
 	className: "bar-of-progress",
@@ -40,7 +40,11 @@ Router.events.on("routeChangeError", progress.finish);
 function MyApp({ Component, pageProps }) {
 	const [user, loading] = useAuthState(auth);
 
-	if (false) {
+	if (loading) {
+		return <Loading />;
+	}
+
+	if (!user) {
 		return <LogInScreen />;
 	}
 

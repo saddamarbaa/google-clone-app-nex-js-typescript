@@ -7,6 +7,8 @@ module.exports = (phase) => {
 		return {
 			reactStrictMode: true,
 			env: {
+				API_KEY: process.env.GOOGLE_API_KEY,
+				CONTEXT_KEY: process.env.CONTEXT_KEY,
 				API_KEY: process.env.API_KEY,
 				AUTH_DOMAIN: process.env.AUTH_DOMAIN,
 				PROJECT_ID: process.env.PROJECT_ID,
@@ -16,7 +18,7 @@ module.exports = (phase) => {
 				MAP_BOX_ACCESS_TOKEN: process.env.MAP_BOX_ACCESS_TOKEN,
 			},
 			images: {
-				domains: ["links.papareact.com"],
+				domains: ["lh3.googleusercontent.com"],
 			},
 		};
 	}
@@ -24,6 +26,8 @@ module.exports = (phase) => {
 	return {
 		reactStrictMode: true,
 		env: {
+			API_KEY: process.env.GOOGLE_API_KEY,
+			CONTEXT_KEY: process.env.CONTEXT_KEY,
 			API_KEY: process.env.API_KEY,
 			AUTH_DOMAIN: process.env.AUTH_DOMAIN,
 			PROJECT_ID: process.env.PROJECT_ID,
@@ -33,7 +37,7 @@ module.exports = (phase) => {
 			MAP_BOX_ACCESS_TOKEN: process.env.MAP_BOX_ACCESS_TOKEN,
 		},
 		images: {
-			domains: ["links.papareact.com"],
+			domains: ["lh3.googleusercontent.com"],
 		},
 	};
 };
