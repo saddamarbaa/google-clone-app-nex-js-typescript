@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply min-h-screen;
+	}
+}
+
+@layer components {
+	.customLink {
+		@apply cursor-pointer transition duration-150 hover:underline;
+	}
+}

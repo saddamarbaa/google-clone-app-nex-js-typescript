@@ -1,17 +1,91 @@
-/** @format */
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-	mode: "jit",
-	purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-	darkMode: false, // or 'media' or 'class'
+	content: [
+		'./app/**/*.{js,ts,jsx,tsx}',
+		'./pages/**/*.{js,ts,jsx,tsx}',
+		'./components/**/*.{js,ts,jsx,tsx}',
+
+		// Or if using `src` directory:
+		'./src/**/*.{js,ts,jsx,tsx}',
+	],
 	theme: {
-		extend: {},
+		extend: {
+			lineClamp: {
+				7: '7',
+				8: '8',
+				9: '9',
+				10: '10',
+				11: '11',
+				12: '12',
+			},
+			colors: {
+				'dark-grey': {
+					50: '#f2f2f3',
+					100: '#d9d9db',
+					200: '#bfbfc2',
+					300: '#a6a6ad',
+					400: '#8c8c97',
+					500: '#737380',
+					600: '#5c5c68',
+					700: '#454550',
+					800: '#2e2e38',
+					900: '#17171c',
+					A100: '#d7d7d9',
+					A200: '#b0afb3',
+					A400: '#89878c',
+					A700: '#343541',
+					A800: '#202123',
+				},
+				'cool-gray': {
+					50: '#fdfdfd',
+					100: '#f7f7f8',
+					200: '#e3e3e4',
+					300: '#cfcfd1',
+					400: '#b9b9bc',
+					500: '#a3a3a8',
+					600: '#8b8b91',
+					700: '#70707a',
+					800: '#56565f',
+					900: '#2d2d33',
+					A800: '#3e3f4b',
+				},
+			},
+			screens: {
+				ss: '300px',
+				xs: '320px',
+				sm: '640px',
+				md: '768px',
+				lg: '1024px',
+				xl: '1280px',
+			},
+		},
+		maxWidth: ({ theme, breakpoints }) => ({
+			none: 'none',
+			0: '0rem',
+			ss: '19rem',
+			xs: '20rem',
+			sm: '24rem',
+			md: '28rem',
+			lg: '32rem',
+			xl: '36rem',
+			'2xl': '42rem',
+			'3xl': '48rem',
+			'4xl': '56rem',
+			'5xl': '64rem',
+			'6xl': '72rem',
+			'7xl': '80rem',
+			full: '100%',
+			min: 'min-content',
+			max: 'max-content',
+			fit: 'fit-content',
+			prose: '65ch',
+			...breakpoints(theme('screens')),
+		}),
 	},
 	variants: {
-		extend: {},
+		lineClamp: ['responsive'],
 	},
-	plugins: [
-		require("tailwind-scrollbar-hide"),
-		// ...
-	],
-};
+	plugins: [],
+	mode: 'jit',
+	darkMode: 'class',
+}
