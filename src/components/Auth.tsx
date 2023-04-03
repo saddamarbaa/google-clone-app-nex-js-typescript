@@ -15,7 +15,7 @@ export default function Auth() {
 	) : (
 		<div className="w-fit">
 			<Link href="/sign-in">
-				<Button>Sign In</Button>
+				<Button buttonClassName="text-white">Sign In</Button>
 			</Link>
 		</div>
 	)

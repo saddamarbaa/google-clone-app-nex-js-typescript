@@ -7,11 +7,11 @@ import { FiSettings } from 'react-icons/fi'
 import { AiOutlineClose } from 'react-icons/ai'
 import { BiMicrophone } from 'react-icons/bi'
 import { useRouter, useSearchParams } from 'next/navigation'
-import Image from 'next/image'
 import { RiImageFill } from 'react-icons/ri'
 
 import SearchHeaderOptions from './SearchHeaderOptions'
 import Auth from './Auth'
+import Logo from './Logo'
 
 export default function SearchHeader() {
 	const router = useRouter()
@@ -34,14 +34,7 @@ export default function SearchHeader() {
 	return (
 		<header className="sticky top-0 z-50  bg-white py-5">
 			<nav className="mx-auto flex max-w-7xl items-center justify-between px-5  text-gray-700 md:px-10">
-				<Image
-					width={100}
-					height={35}
-					src="/images/googlelogo.png"
-					alt="google logo"
-					className="cursor-pointer"
-					onClick={() => router.push('/')}
-				/>
+				<Logo />
 				<form
 					onSubmit={handleSubmit}
 					className="ml-10 mr-5 flex max-w-[650px] flex-grow cursor-pointer items-center rounded-full border border-gray-200 px-6 py-3 caret-blue-500 shadow-sm transition  duration-100 ease-in-out focus-within:shadow-lg hover:shadow-lg">
