@@ -68,6 +68,7 @@ export default function Home() {
 					<div className="mt-8 flex  w-3/4 max-w-[400px] flex-col justify-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0">
 						<div className="sm:fit w-full">
 							<Button
+								type="submit"
 								buttonClassName={'text-black'}
 								color="gray"
 								size="large"
