@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 import Button from '@/components/Button'
 
 export default function page() {
-	const { data: session } = useSession()
+	const { data: session, status } = useSession()
 	const router = useRouter()
 
 	useEffect(() => {
@@ -21,28 +21,35 @@ export default function page() {
 	return (
 		<div className="flex min-h-screen flex-col pb-64">
 			<HomeHeader />
-
-			<div className="p-5">
-				<section className="py-8 max-w-sm mx-auto w-full flex flex-col space-y-5 border border-gray-200 p-4 rounded mt-12">
-					<h1 className="text-center text-3xl font-bold ">Sign In</h1>
-					<Button
-						color="white"
-						buttonClassName="text-black font-semibold"
-						onClick={() => signIn('google')}
-						isLoading={false}
-						Icon={FcGoogle}>
-						Sign Up with Google
-					</Button>
-					<Button
-						color="white"
-						buttonClassName="text-black font-semibold"
-						// onClick={handleClick}
-						isLoading={false}
-						Icon={BsGithub}>
-						Sign Up with GitHub
-					</Button>
-				</section>
-			</div>
+			{status !== 'loading' ? (
+				<div className="p-5">
+					<section className="py-8 max-w-sm mx-auto w-full flex flex-col space-y-5 border border-gray-200 p-4 rounded mt-12">
+						<h1 className="text-center text-3xl font-bold ">Sign In</h1>
+						<Button
+							color="white"
+							buttonClassName="text-black font-semibold"
+							onClick={() => signIn('google')}
+							isLoading={false}
+							Icon={FcGoogle}>
+							Sign Up with Google
+						</Button>
+						<Button
+							color="white"
+							buttonClassName="text-black font-semibold"
+							onClick={() => signIn('github')}
+							isLoading={false}
+							Icon={BsGithub}>
+							Sign Up with GitHub
+						</Button>
+					</section>
+				</div>
+			) : (
+				<div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center  px-6 py-12  w-full">
+					<p className="mt-8 w-full max-w-lg rounded  border bg-white p-6 text-center font-bold ">
+						Initializing User...
+					</p>
+				</div>
+			)}
 		</div>
 	)
 }
