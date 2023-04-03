@@ -40,13 +40,13 @@ export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col">
 			<HomeHeader />
-			<div className="flex-1 px-5">
+			<div className="pb-64 sm:pb-52 flex-1 px-5">
 				<form className="flex flex-col items-center" onSubmit={handleSubmit}>
 					<div className="relative mt-28">
 						<Image
 							src="/images/googlelogo_color_272x92dp.png"
 							alt="Google Logo"
-							width={250}
+							width={220}
 							height={100}
 						/>
 					</div>
