@@ -22,7 +22,7 @@ export default function page() {
 		<div className="flex min-h-screen flex-col pb-64">
 			<HomeHeader />
 			{status !== 'loading' ? (
-				<div className="p-5">
+				<div className="p-5  flex-1 flex items-center">
 					<section className="py-8 max-w-sm mx-auto w-full flex flex-col space-y-5 border border-gray-200 p-4 rounded mt-12">
 						<h1 className="text-center text-3xl font-bold ">Sign In</h1>
 						<Button

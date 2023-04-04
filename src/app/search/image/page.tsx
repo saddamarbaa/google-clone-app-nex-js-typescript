@@ -33,7 +33,7 @@ export default async function ImageSearchPage({ searchParams }: Props) {
 
 	await new Promise((resolve) => setTimeout(resolve, 2000))
 
-	return <ImageSearchResult searchResult={mockedResponse} />
+	// return <ImageSearchResult searchResult={mockedResponse} />
 
 	const response = await fetch(url, { cache: 'no-store' })
 

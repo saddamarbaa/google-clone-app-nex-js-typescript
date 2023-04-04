@@ -33,12 +33,12 @@ export default async function WebSearchPage({ searchParams }: Props) {
 
 	await new Promise((resolve) => setTimeout(resolve, 2000))
 
-	return (
-		<WebSearchResult
-			searchTerm={searchParams.searchTerm || ''}
-			searchResult={mockedResponse}
-		/>
-	)
+	// return (
+	// 	<WebSearchResult
+	// 		searchTerm={searchParams.searchTerm || ''}
+	// 		searchResult={mockedResponse}
+	// 	/>
+	// )
 
 	const response = await fetch(url, { cache: 'no-store' })
 
