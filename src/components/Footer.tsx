@@ -1,7 +1,11 @@
 'use client'
 import React from 'react'
-import Location from './Location'
 import Link from 'next/link'
+
+
+import Location from './Location'
+
+
 
 export default function Footer() {
 	return (
@@ -10,7 +14,7 @@ export default function Footer() {
 				<div className="max-w-7xl mx-auto">
 					<div className="flex flex-col sm:flex-row items-center justify-between p-4 py-3">
 						<div className="flex cursor-pointer items-center space-x-5">
-							<Location />
+             <Location />
 						</div>
 						<div className="flex cursor-pointer items-center space-x-5">
 							<p className="customLink">

@@ -65,7 +65,7 @@ export default function Home() {
 						<HiMicrophone className="h-5" />
 					</div>
 
-					<div className="mt-8 flex  w-3/4 max-w-[400px] flex-col justify-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0">
+					<div className="mt-8 flex  w-3/4 max-w-[410px] flex-col justify-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0">
 						<div className="sm:fit w-full">
 							<Button
 								type="submit"
@@ -76,7 +76,7 @@ export default function Home() {
 								Google Search
 							</Button>
 						</div>
-						<div className="sm:fit w-full">
+						 <div className="sm:fit w-full">
 							<Button
 								buttonClassName={'text-black'}
 								type="button"
@@ -87,7 +87,7 @@ export default function Home() {
 								onClick={randomSearch}>
 								Im Feeling Lucky
 							</Button>
-						</div>
+						</div> 
 					</div>
 				</form>
 			</div>

@@ -1,10 +1,13 @@
-import Footer from '@/components/Footer'
-import { authOptions } from '@/pages/api/auth/[...nextauth]'
-import { getServerSession } from 'next-auth'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+
 import '../styles/globals.css'
+import Footer from '@/components/Footer'
 import Providers from './Providers'
 
-export const metadata = {
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
 	title: 'Google Clone app',
 	description: 'Google Clone build with React + Next Js13 + TypeScript',
 }
@@ -14,12 +17,10 @@ export default async function RootLayout({
 }: {
 	children: React.ReactNode
 }) {
-	const session = await getServerSession(authOptions)
-	console.log(' session', session)
 	return (
-		<html lang="en">
+		<html lang="en" className={inter.className}>
 			<body className="relative flex min-h-screen flex-col">
-				<Providers session={session}>
+				<Providers>
 					{children}
 					<Footer />
 				</Providers>

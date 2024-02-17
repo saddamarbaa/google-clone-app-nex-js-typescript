@@ -1,14 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-	content: [
-		'./app/**/*.{js,ts,jsx,tsx}',
-		'./pages/**/*.{js,ts,jsx,tsx}',
-		'./components/**/*.{js,ts,jsx,tsx}',
+import type { Config } from "tailwindcss";
 
-		// Or if using `src` directory:
-		'./src/**/*.{js,ts,jsx,tsx}',
-	],
-	theme: {
+const config: Config = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
 		extend: {
 			lineClamp: {
 				7: '7',
@@ -88,4 +86,6 @@ module.exports = {
 	plugins: [],
 	mode: 'jit',
 	darkMode: 'class',
-}
+};
+
+export default config;

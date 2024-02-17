@@ -10,6 +10,7 @@ import Button from '@/components/Button'
 
 export default function page() {
 	const { data: session, status } = useSession()
+	// const status: "loading" | "authenticated" | "unauthenticated"
 	const router = useRouter()
 
 	useEffect(() => {

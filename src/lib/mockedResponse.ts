@@ -34,6 +34,55 @@ export const mockedResponse: SearchResult = {
 	items: [
 		{
 			kind: 'customsearch#result',
+			title: 'Learn JavaScript Online JavaScript - Wikipedia',
+			htmlTitle: '<b>JavaScript</b> - Wikipedia',
+			link: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/JavaScript_code.png',
+			displayLink: 'en.wikipedia.org',
+			snippet: 'JavaScript - Wikipedia',
+			htmlSnippet: '<b>JavaScript</b> - Wikipedia',
+			mime: 'image/png',
+			fileFormat: 'image/png',
+			image: {
+				contextLink: 'https://en.wikipedia.org/wiki/JavaScript',
+				height: 587,
+				width: 882,
+				byteSize: 102913,
+				thumbnailLink:
+					'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb3hetO90D4FAi-aqrztwFL0ZE22ogw8pgsHLdKNDLtAmhgsuGQE66_04&s',
+				thumbnailHeight: 97,
+				thumbnailWidth: 146,
+			},
+			cacheId: 'kVQng67g-kIJ',
+			formattedUrl:
+				'https://www.google.com/maps/search/?api=1&query...query...id...',
+			htmlFormattedUrl:
+				'https://www.google.com/maps/search/?api=1&amp;query...query...id...',
+			pagemap: {
+				cse_thumbnail: [
+					{
+						src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQUDTMfgWSotdHvbOKW4AmY1steqsilnDJS4q33zGx-d0AXvvxPiFY9Mvs',
+						width: '204',
+						height: '247',
+					},
+				],
+				metatags: [
+					{
+						referrer: 'origin',
+						'twitter:card': 'summary',
+						'theme-color': '#3367d6',
+						viewport: 'initial-scale=1.0, user-scalable=no',
+						google: 'notranslate',
+					},
+				],
+				cse_image: [
+					{
+						src: 'https://maps.gstatic.com/tactile/basepage/pegman_sherlock.png',
+					},
+				],
+			},
+		},
+		{
+			kind: 'customsearch#result',
 			title: 'JavaScript - Wikipedia',
 			htmlTitle: '<b>JavaScript</b> - Wikipedia',
 			link: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/JavaScript_code.png',
