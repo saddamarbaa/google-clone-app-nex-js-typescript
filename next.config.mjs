@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	experimental: {
-		appDir: true,
-	},
 	images: {
 		domains: [
 			'lh3.googleusercontent.com',
@@ -12,4 +9,4 @@ const nextConfig = {
 	},
 }
 
-module.exports = nextConfig
+export default nextConfig;

@@ -6,8 +6,7 @@ export default function loading() {
 		<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
 			<div>
 				<Image
-					src="/svg/loading-spinner 2.svg"
-					// src="/svg/loading-img.svg"
+						src="/images/svg/loading-spinner2.svg"
 					alt="Loading"
 					width={90}
 					height={90}

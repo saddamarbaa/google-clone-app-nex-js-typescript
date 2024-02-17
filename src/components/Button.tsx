@@ -52,6 +52,7 @@ export default function Button({
 	// add disabled and loading states to button
 	const disabledClass = isDisabled ? 'opacity-50 cursor-not-allowed' : ''
 	const loadingClass = isLoading ? 'animate-pulse' : ''
+
 	return (
 		<button
 			id={id}
@@ -70,7 +71,7 @@ export default function Button({
 			{isLoading ? (
 				<div>
 					<Image
-						src="/images/svg/Spinner-1s-200px.svg"
+						src="/images/svg/loading-spinner2.svg"
 						alt="Loading"
 						width={30}
 						height={30}
