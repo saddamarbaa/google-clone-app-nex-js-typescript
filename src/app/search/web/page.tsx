@@ -54,12 +54,10 @@ export default async function WebSearchPage({ searchParams }: Props) {
 			<div className="flex w-full flex-col items-center justify-center p-4 pb-[6rem] pt-[8rem] ">
 				<div className="text-grey-900 mb-8 text-center">
 					<p className="rounded border bg-white p-8 text-xl">
-						No results found try search something else or go to{' '}
-						<Link
-							href="/"
-							className="cursor-pointer text-blue-500 hover:underline">
-							home page
-						</Link>
+						Sorry, no results were found. Please try searching for something else or go to{' '}
+          <Link href="/" className="cursor-pointer text-blue-500 hover:underline">
+            the home page
+          </Link>.
 					</p>
 				</div>
 			</div>
